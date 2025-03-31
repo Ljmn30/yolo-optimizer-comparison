@@ -81,27 +81,27 @@ $ yolo detect train data=/path/data.yaml model=yolov8n.pt epochs=150 imgsz=640 p
 
 <table>
   <tr>
-    <td><img src="predict/detec1.png" alt="prediction 1" width="400"></td>
-    <td><img src="predict/detec2.png" alt="prediction 2" width="400"></td>
+    <td><img src="predict/detec1.png" alt="prediction 1" width="100%"></td>
+    <td><img src="predict/detec2.png" alt="prediction 2" width="100%"></td>
   </tr>
   <tr>
-    <td><img src="predict/detec3.png" alt="prediction 3" width="400"></td>
-    <td><img src="predict/detec4.png" alt="prediction 4" width="400"></td>
+    <td><img src="predict/detec3.png" alt="prediction 3" width="100%"></td>
+    <td><img src="predict/detec4.png" alt="prediction 4" width="100%"></td>
   </tr>
 </table>
 
 ## 3. Evaluation
 ### Performance metrics of each optimizer algorithms based on YOLOv8x
 
-<img src="table/Alloptimizer.png" alt="bench 1" width="400">
+<img src="table/Alloptimizer.png" alt="bench 1" width="100%">
 
 ### Comparison between different optimizer algorithms YOLOv8x and YOLO11x models
 
-<img src="table/twomodel.png" alt="bench 1" width="400">
+<img src="table/twomodel.png" alt="bench 1" width="100%">
 
 ### Comparison between optimizers on three GPUs based on early stopping with convergence
 
-<img src="table/allgpu.png" alt="bench 1" width="400">
+<img src="table/allgpu.png" alt="bench 1" width="100%">
 
 
 ## 4. Publications
