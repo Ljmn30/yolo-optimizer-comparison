@@ -1,7 +1,5 @@
 # yolo-optimizer-comparison
 
-# Stereo Object Detection with Disparity Depth Estimation
-
 <img alt="license" src="https://img.shields.io/github/license/mashape/apistatus.svg"/>
 
 This repository contains the results of a comparative study of different optimizing algorithms used during the training phase with YOLO in the USV context using performance metrics. Additionally, it compares YOLOv8x with its most recent equivalent version at the time, YOLO11x; and finally, it compares these same algorithms for these two versions but applying the convergence-based early stopping technique.
