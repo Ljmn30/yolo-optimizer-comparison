@@ -106,7 +106,7 @@ $ yolo detect train data=/path/data.yaml model=yolov8n.pt epochs=150 imgsz=640 p
 
 ## 4. Publications
 
-In process.
+In process "A Comparative Study of Optimizer Algorithms for YOLO-Based Object Detection in USVs"
 
 ## 5. Acknowledgements
 
