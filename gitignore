@@ -1,0 +1,35 @@
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Archivos de Spotlight
+.Spotlight-V100
+
+# Archivos de iconos
+.Icon?
+._*
+
+# Archivos de Thumbnails
+Thumbs.db
+
+# Archivos temporales de macOS
+.fseventsd
+.Trashes
+.VolumeIcon.icns
+
+# Archivos de red de macOS
+.Network Trash Folder
+
+# Archivos de metadatos (al copiar desde discos)
+.metadata_never_index
+
+# Archivos de Time Machine
+.Backup*
+.com.apple.timemachine.donotpresent
+
+# Otros archivos invisibles
+*.TemporaryItems
+.TemporaryItems
+.apdisk
