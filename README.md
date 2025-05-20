@@ -103,7 +103,7 @@ $ yolo detect train data=/path/data.yaml model=yolov8n.pt epochs=150 imgsz=640 p
 
 <img src="table/allgpu.png" alt="bench 1" width="100%">  
 
-#### Computational resource usage with and without Early Stopping
+### Computational resource usage with and without Early Stopping
 
 <img src="table/TrainingTimeByGPU.png" alt="bench 1" width="100%">
 
