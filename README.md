@@ -101,7 +101,7 @@ $ yolo detect train data=/path/data.yaml model=yolov8n.pt epochs=150 imgsz=640 p
 
 ### Comparison between optimizers on three GPUs based on early stopping with convergence
 
-<img src="table/allgpu.png" alt="bench 1" width="100%">  
+<img src="table/twogpu.png" alt="bench 1" width="100%">  
 
 ### Computational resource usage with and without Early Stopping  
 
