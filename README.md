@@ -4,14 +4,14 @@
 
 This repository presents a comparative analysis of optimizers (**SGD, Adam, NAdam, RAdam, and Adadelta**) applied to **YOLOv8n** and **YOLO12n** architectures in the context of object detection in maritime systems with limited resources, such as **Unmanned Surface Vehicles (USVs)**.  
 
-Key metrics were evaluated: **mAP, accuracy, recall, inference time, and energy consumption**, using heterogeneous GPUs (**NVIDIA Tesla V100 and A30**).  
+Key metrics were evaluated: mAP, accuracy, recall, inference time, and power consumption, using heterogeneous GPUs (NVIDIA Tesla V100 and A30) for both training and evaluation, in addition to the Jetson AGX Orin.
 
 Key Findings:    
-- **Adadelta and SGD** achieved the best balance between accuracy (**≈90–92%**), stability, and energy efficiency.  
-- The **A30 GPU** showed **40% more training efficiency** compared to the Tesla V100.  
+- **Adadelta and SGD** achieved the best balance between accuracy (**90–92%**), stability, and energy efficiency.  
+- The A30 GPU showed 40% more training efficiency compared to the Tesla V100 under the early stopping technique.  
 - The **Maritime Operational Efficiency Metric (MOEM)** is introduced, which unifies accuracy, speed, and energy consumption for a comprehensive evaluation.  
 
-These results underscore the importance of optimizer selection and hyperparameter configuration in achieving a balance between **accuracy, stability, and efficiency** in **real-time** maritime applications across the **Cloud-to-Edge continuum**.  
+These results underscore the importance of optimizer selection and hyperparameter configuration in achieving a balance between **accuracy, stability, and efficiency** in **real-time** maritime applications.
 
 
 For this study we have followed these steps:
