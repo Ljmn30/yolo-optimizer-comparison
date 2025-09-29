@@ -119,6 +119,8 @@ $ yolo detect train data=/path/data.yaml model=yolov8n.pt epochs=150 imgsz=640 p
 
 <img src="table/summarydescriptive.png" alt="bench 1" width="100%">
 
+#### Statistical analysis: comparison of the 120 training records on GPUs by optimizer
+
 <img src="table/analysis.png" alt="bench 1" width="100%">
 
 ### From Cloud to Edge: A Continuum of Efficiency
