@@ -2,7 +2,17 @@
 
 <img alt="license" src="https://img.shields.io/github/license/mashape/apistatus.svg"/>
 
-This repository contains the results of a comparative study of different optimizing algorithms used during the training phase with YOLO in the USV context using performance metrics. Additionally, it compares YOLOv8x with its most recent equivalent version at the time, YOLO11x; and finally, it compares these same algorithms for these two versions but applying the convergence-based early stopping technique.
+This repository presents a comparative analysis of optimizers (**SGD, Adam, NAdam, RAdam, and Adadelta**) applied to **YOLOv8n** and **YOLO12n** architectures in the context of object detection in maritime systems with limited resources, such as **Unmanned Surface Vehicles (USVs)**.  
+
+Key metrics were evaluated: **mAP, accuracy, recall, inference time, and energy consumption**, using heterogeneous GPUs (**NVIDIA Tesla V100 and A30**).  
+
+Key Findings:    
+- **Adadelta and SGD** achieved the best balance between accuracy (**≈90–92%**), stability, and energy efficiency.  
+- The **A30 GPU** showed **40% more training efficiency** compared to the Tesla V100.  
+- The **Maritime Operational Efficiency Metric (MOEM)** is introduced, which unifies accuracy, speed, and energy consumption for a comprehensive evaluation.  
+
+These results underscore the importance of optimizer selection and hyperparameter configuration in achieving a balance between **accuracy, stability, and efficiency** in **real-time** maritime applications across the **Cloud-to-Edge continuum**.  
+
 
 For this study we have followed these steps:
 
@@ -91,26 +101,40 @@ $ yolo detect train data=/path/data.yaml model=yolov8n.pt epochs=150 imgsz=640 p
 </table>
 
 ## 3. Evaluation
-### Performance metrics of each optimizer algorithms based on YOLOv8x
+### Performance metrics of each optimizer algorithms based on YOLOv8n
 
 <img src="table/Alloptimizer.png" alt="bench 1" width="100%">
 
-### Comparison between different optimizer algorithms YOLOv8x and YOLO11x models
+### Comparison between different optimizer algorithms YOLOv8n and YOLO12n models
 
 <img src="table/twomodel.png" alt="bench 1" width="100%">
 
-### Comparison between optimizers on three GPUs based on early stopping with convergence
+### GPU comparison using early stopping: Statistical Analysis
 
-<img src="table/twogpu.png" alt="bench 1" width="100%">  
+#### Summary of statistical results: main effects and relative efficiency
 
-### Computational resource usage with and without Early Stopping  
+<img src="table/summary.png" alt="bench 1" width="100%">
 
-<img src="table/TrainingTimeByGPU.png" alt="bench 1" width="100%">
+#### Descriptive statistics by GPU and optimizer (mean ± standard deviation, n=12)  
+
+<img src="table/summarydescriptive.png" alt="bench 1" width="100%">
+
+<img src="table/analysis.png" alt="bench 1" width="100%">
+
+### From Cloud to Edge: A Continuum of Efficiency
+
+#### Comprehensive analysis of inference time, energy consumption, and efficiency in YOLO models trained with different optimizers on NVIDIA architectures
+
+<img src="table/efficiency_Nvidia.png" alt="bench 1" width="100%">
 
 ## 4. Publications
 
-In process "A Comparative Study of Optimizer Algorithms for YOLO-Based Object Detection in USVs"
+In process "A Comparative Study of Optimizer Algorithms for YOLO-Based Object Detection in USVs: Statistical Analysis and Mathematical Framework"
 
 ## 5. Acknowledgements
 
 J.L.M. thanks the National Secretariat of Science, Technology and Innovation (SENACYT) of Panama for financial support during the completion of his PhD.
+
+## 6. Funding
+
+This paper has been partially funded by the EU (FEDER), the Spanish MINECO under grants PID2021-126576NB-I00 and PID2024-158311NB-I00 funded by MCIN/AEI/10.13039/501100011033 and by European Union ``ERDF A way of making Europe'' and the NextGenerationEU/PRT.
