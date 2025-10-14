@@ -123,14 +123,12 @@ $ yolo detect train data=/path/data.yaml model=yolov8n.pt epochs=150 imgsz=640 p
 #### Inference Performance Evaluation
 All measurements obtained using TensorRT-optimized models in FP32 precision. Composite scores calculated using:
 
-<p align="center">
-\[
-\text{Score} = 100 - \left(
-    W \cdot \left(\frac{E}{N}\right)
+$$
+\mathrm{Score} = 100 - \left(
+    W \cdot \frac{E}{N}
     + (1 - W) \cdot (100 - A)
 \right)
-\]
-</p>
+$$
 
 with \(W = 0.55\) and normalization constant \(N = 70.43\) W (maximum observed power consumption). Power measurements represent mean \(\pm\) standard deviation across test set inference.
 
