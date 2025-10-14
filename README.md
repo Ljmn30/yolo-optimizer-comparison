@@ -2,16 +2,11 @@
 
 <img alt="license" src="https://img.shields.io/github/license/mashape/apistatus.svg"/>
 
-This repository presents a comparative analysis of optimizers (**SGD, Adam, NAdam, RAdam, and Adadelta**) applied to **YOLOv8n** and **YOLO12n** architectures in the context of object detection in maritime systems with limited resources, such as **Unmanned Surface Vehicles (USVs)**.  
+This repository presents the results of a study on a comparative analysis of the choice of optimizers and their impact on the different phases of the deep learning life cycle, using YOLO-based object detection models, specifically YOLOv8n and YOLO12n for unmanned surface vehicles (USVs).
 
-Key metrics were evaluated: mAP, accuracy, recall, inference time, and power consumption, using heterogeneous GPUs (NVIDIA Tesla V100 and A30) for both training and evaluation, in addition to the Jetson AGX Orin.
+Five optimizers were evaluated, including SGD, Adam, NAdam, RAdam, and Adadelta, on various devices such as Tesla V100, A30, RTX 3090, and Jetson AGX Orin, comparing their impact on performance according to traditional metrics (mAP, recall, etc.), computational performance (FPS), and inference performance from an energy perspective.
 
-Key Findings:    
-- **Adadelta and SGD** achieved the best balance between accuracy (**90–92%**), stability, and energy efficiency.  
-- The A30 GPU showed 40% more training efficiency compared to the Tesla V100 under the early stopping technique.  
-- The **Maritime Operational Efficiency Metric (MOEM)** is introduced, which unifies accuracy, speed, and energy consumption for a comprehensive evaluation.  
-
-These results underscore the importance of optimizer selection and hyperparameter configuration in achieving a balance between **accuracy, stability, and efficiency** in **real-time** maritime applications.
+A total operational efficiency score was used to identify the optimizer with the best balance between accuracy and energy consumption, which resulted in Adadelta consistently achieving the best balance for both YOLOv8 and YOLO12, given the challenges of the maritime/aquatic environment, which requires high accuracy, stability, and real-time energy efficiency for devices with limited resources.
 
 
 For this study we have followed these steps:
@@ -128,12 +123,15 @@ $ yolo detect train data=/path/data.yaml model=yolov8n.pt epochs=150 imgsz=640 p
 #### Inference Performance Evaluation
 All measurements obtained using TensorRT-optimized models in FP32 precision. Composite scores calculated using:
 
+<p align="center">
 \[
 \text{Score} = 100 - \left(
     W \cdot \left(\frac{E}{N}\right)
     + (1 - W) \cdot (100 - A)
 \right)
 \]
+</p>
+
 with \(W = 0.55\) and normalization constant \(N = 70.43\) W (maximum observed power consumption). Power measurements represent mean \(\pm\) standard deviation across test set inference.
 
 <img src="table/efficiency_Nvidia.png" alt="bench 1" width="100%">
