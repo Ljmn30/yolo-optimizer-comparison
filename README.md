@@ -130,7 +130,7 @@ $$
 \right)
 $$
 
-with \(W = 0.55\) and normalization constant \(N = 70.43\) W (maximum observed power consumption). Power measurements represent mean \(\pm\) standard deviation across test set inference.
+with \(W = 0.55\) and normalization constant \(N = 70.43\) W (maximum observed power consumption). Power measurements represent mean standard deviation across test set inference.
 
 <img src="table/efficiency_Nvidia.png" alt="bench 1" width="100%">
 
