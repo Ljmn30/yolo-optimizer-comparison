@@ -107,7 +107,7 @@ $ yolo detect train data=/path/data.yaml model=yolov8n.pt epochs=150 imgsz=640 p
 
 ### Comparison between different optimizer algorithms YOLOv8n and YOLO12n models
 
-<img src="table/twomodel.png" alt="bench 1" width="100%">
+<img src="table/twogpu.png" alt="bench 1" width="100%">
 
 ### GPU comparison using early stopping: Statistical Analysis
 
@@ -123,9 +123,18 @@ $ yolo detect train data=/path/data.yaml model=yolov8n.pt epochs=150 imgsz=640 p
 
 <img src="table/analysis.png" alt="bench 1" width="100%">
 
-### From Cloud to Edge: A Continuum of Efficiency
+### Computing Continuum Analysis: From Cloud to Edge Deployment.
 
-#### Comprehensive analysis of inference time, energy consumption, and efficiency in YOLO models trained with different optimizers on NVIDIA architectures
+#### Inference Performance Evaluation
+All measurements obtained using TensorRT-optimized models in FP32 precision. Composite scores calculated using:
+
+\[
+\text{Score} = 100 - \left(
+    W \cdot \left(\frac{E}{N}\right)
+    + (1 - W) \cdot (100 - A)
+\right)
+\]
+with \(W = 0.55\) and normalization constant \(N = 70.43\) W (maximum observed power consumption). Power measurements represent mean \(\pm\) standard deviation across test set inference.
 
 <img src="table/efficiency_Nvidia.png" alt="bench 1" width="100%">
 
