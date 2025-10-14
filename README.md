@@ -121,7 +121,7 @@ $ yolo detect train data=/path/data.yaml model=yolov8n.pt epochs=150 imgsz=640 p
 ### Computing Continuum Analysis: From Cloud to Edge Deployment.
 
 #### Inference Performance Evaluation
-All measurements obtained using TensorRT-optimized models in FP32 precision. Composite scores calculated using:
+All measurements were obtained using TensorRT-optimized models in FP32 precision. Composite scores were calculated using:
 
 $$
 \mathrm{Score} = 100 - \left(
@@ -130,7 +130,7 @@ $$
 \right)
 $$
 
-with \(W = 0.55\) and normalization constant \(N = 70.43\) W (maximum observed power consumption). Power measurements represent mean \(\pm\) standard deviation across test set inference.
+with \(W = 0.55\) and normalization constant \(N = 70.43\) W (maximum observed power consumption). Power measurements represent mean \(\pm\) standard deviation across test set inference.
 
 <img src="table/efficiency_Nvidia.png" alt="bench 1" width="100%">
 
